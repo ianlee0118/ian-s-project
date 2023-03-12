@@ -28,7 +28,6 @@ var w2Y = 200;
 var w2W = 1;
 var w2H = 400;
 
-
 function setup() {
   createCanvas(600, 400);
   rectMode(CENTER);
@@ -56,7 +55,9 @@ function mousePressed() {
     mouseY < height
   ) {
     //2nd box button
-    boxes.push(new Box(random(width), random(290), random(0,100),random(0,100)));
+    boxes.push(
+      new Box(random(width), random(290), random(0, 100), random(0, 100))
+    );
   } else if (
     width / 2 < mouseX &&
     mouseX < (width / 4) * 3 &&
@@ -64,7 +65,7 @@ function mousePressed() {
     mouseY < height
   ) {
     //3rd box button
-    circles.push(new Circle(random(width), random(290), random(0,50)));
+    circles.push(new Circle(random(width), random(290), random(0, 50)));
   } else {
   }
 }
@@ -73,7 +74,6 @@ function draw() {
   background(100);
 
   for (var i = 0; i < boxes.length; i++) {
-    
     boxes[i].show();
   }
   for (var i = 0; i < circles.length; i++) {
@@ -148,12 +148,31 @@ function draw() {
   }
   rect((width / 8) * 7, (height / 8) * 7, width / 4, height / 4);
 
+  //4th box
   push();
   fill(255, 0, 0);
-  rect((width / 8) * 7, (height / 8) * 7, width / 8, height / 8);
-//line
-//circle
+  ellipse((width / 8) * 7, (height / 8) * 7, width / 8, height / 8);
+  line((width / 4) * 3, height, width, (height / 4) * 3);
+  line((width / 4) * 3, (height / 4) * 3, width, (height / 4) * 4);
+  pop();
 
+  //3rd box
+  push();
+  fill(255, 0, 0);
+  ellipse((width / 8) * 5, (height / 8) * 7, width / 8, height / 8);
+  pop();
 
+  //2nd box
+  push();
+  fill(255, 0, 0);
+  rect((width / 8) * 3, (height / 8) * 7, width / 8, height / 8);
+  pop();
+  
+  //1st box
+  push();
+  fill(255, 0, 0);
+  rect((width / 8) * 1, (height / 8) * 7, width / 8, height / 8);
+  line((width / 4) * 0, height, (width / 4) * 1, (height / 4) * 3);
+  line((width / 4) * 0, (height / 4) * 3, (width / 4) * 1, (height / 4) * 4);
   pop();
 }
