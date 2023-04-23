@@ -13,8 +13,12 @@ var ball;
 var shot;
 var LWall, RWall, roof;
 
+var particles = [];
+var particleNum = 10;
+
 var world;
 var mConstraint;
+
 
 var defaultCategory = 0x0001,
   ballCategory = 0x0002,
@@ -42,10 +46,10 @@ function setup() {
   RWall = new Ground(width, height / 2, 20, height);
   roof = new Ground(width / 2, 0, width, 25);
 
-  var boxW = 50;
-  var boxH = 50;
-  var boxRow = 3;
-  var boxCol = 3;
+  var boxW = 40;
+  var boxH = 40;
+  var boxRow = 5;
+  var boxCol = 5;
 
   for (var i = 0; i < boxRow; i++) {
     for (var j = 0; j < boxCol; j++) {

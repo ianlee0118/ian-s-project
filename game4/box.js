@@ -19,19 +19,33 @@ class Box {
     this.body.b = random(100, 255);
 
     this.eraseState = false;
+    this.particleState = false;
   }
 
   show() {
     var pos = this.body.position;
     var angle = this.body.angle;
     
-    if(this.eraseState == true){
-      push();
-      noStroke();
-      fill(255, 0, 0);
-      translate(pos.x, pos.y);
-      ellipse(0, 0, this.w/10, this.h/10);
-      pop();
+    if(this.eraseState == true) {
+      if(this.particleState == false){
+      for(var i = 0; i<particleNum; i++){
+        var p = new Particle(pos.x,pos.y);
+        particles.push(p);
+    }
+    this.particleState = true;
+  }
+
+      for(var i = 0; i<particles.length; i++){
+        particles[i].move();
+        particles[i].show();
+    }
+    
+    if (particles.length > 10) {
+      particles.splice(0, 10);
+    }
+
+
+
     }
 
     if(this.eraseState == false){
