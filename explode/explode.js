@@ -1,7 +1,8 @@
 let objects = [];
 
 function setup() {
-  createCanvas(400, 400);
+  var canvas = createCanvas(400, 400);
+  canvas.parent("canvasP");
 
   // Create some objects to destroy
   for (let i = 0; i < 5; i++) {

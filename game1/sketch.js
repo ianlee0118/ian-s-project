@@ -29,11 +29,13 @@ var w2W = 1;
 var w2H = 400;
 
 function setup() {
-  createCanvas(600, 400);
+  var canvas = createCanvas(600, 400);
+  canvas.parent("canvasP");
+
   rectMode(CENTER);
   ellipseMode(CENTER);
   engine = Engine.create();
-  Engine.run(engine);
+  Matter.Runner.run(engine);
 
   ground1 = Bodies.rectangle(g1X, g1Y, g1W, g1H, { isStatic: true });
   Composite.add(engine.world, ground1);

@@ -31,8 +31,9 @@
     list-style: none;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    font-size: 2vw;
+    font-size: 1.5vw;
     position: relative;
+    overflow-y: auto;
 }
 
 #menu li {
@@ -68,4 +69,3 @@ a {
     height: 80vh;
     margin: 0 0 0 -17px;
 }
-

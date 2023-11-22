@@ -2,7 +2,8 @@ let movers = [];
 
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("canvasP");
   reset();
 }
 
