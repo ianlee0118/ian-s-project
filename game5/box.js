@@ -62,7 +62,9 @@ class Box {
   erase() {
     if (this.body.angularSpeed > 0.1) {
       Composite.remove(engine.world, this.body);
+      sound1.play();
       this.eraseState = true;
+      this.body.angularSpeed = 0;
     }
   }
 }

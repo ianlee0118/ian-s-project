@@ -13,7 +13,8 @@ var ball;
 var balls = [];
 var ballSize = 20;
 var LWall, RWall, roof;
-
+var sound;
+var sound1;
 var particles = [];
 var particleNum = 10;
 
@@ -35,12 +36,23 @@ var defaultCategory = 0x0001,
     ballCategory = 0x0002,
     boxCategory = 0x0004;
 
+
+
+function preload(){
+    sound = loadSound("music/bgm.mp3");
+    sound1 = loadSound("music/break.wav");
+}
+
+
 function setup() {
     createCanvas(windowWidth - 20, windowHeight - 30);
     engine = Engine.create();
     world = engine.world;
     Runner.start(engine);
     engine.timing.delta = 1 / 60;
+
+sound.loop();
+sound.setVolume(0.1);
 
     rectMode(CENTER);
 
