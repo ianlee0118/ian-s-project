@@ -2,207 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta htd-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="p5.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Ian's World</title>
+    <title>Ian's World - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="intro">
-            <a href="index.html">Ian's World</a>
-            
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1 class="title">Ian's World</h1>
+            </div>
+            <div class="header-center">
+                <p class="description">
+                    Imagine a world where there's no competition and you can have<br>
+                    a safe space where you can be alone.
+                </p>
+            </div>
+            <div class="header-right">
+                <nav class="navigation">
+                    <a href="#projects" class="nav-item">
+                        <div class="nav-item-row1">
+                            <div class="nav-title">My imagination</div>
+                        </div>
+                        <div class="nav-item-row2">
+                            <div class="nav-subtitle-container">
+                                <div class="nav-subtitle nav-subtitle-1">Projects</div>
+                                <div class="nav-subtitle nav-subtitle-2">Projects</div>
+                            </div>
+                            <div class="nav-arrow-container">
+                                <img src="images/line_arrow.svg" alt="arrow" class="nav-arrow nav-arrow-1">
+                                <img src="images/line_arrow.svg" alt="arrow" class="nav-arrow nav-arrow-2">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#about" class="nav-item">
+                        <div class="nav-item-row1">
+                            <div class="nav-title">Who am I</div>
+                        </div>
+                        <div class="nav-item-row2">
+                            <div class="nav-subtitle-container">
+                                <div class="nav-subtitle nav-subtitle-1">About</div>
+                                <div class="nav-subtitle nav-subtitle-2">About</div>
+                            </div>
+                            <div class="nav-arrow-container">
+                                <img src="images/line_arrow.svg" alt="arrow" class="nav-arrow nav-arrow-1">
+                                <img src="images/line_arrow.svg" alt="arrow" class="nav-arrow nav-arrow-2">
+                            </div>
+                        </div>
+                    </a>
+                </nav>
+            </div>
         </div>
+    </header>
 
-        <div class="menutab">
-            <ul id="menu">
-                
-                <li>
-                    <a href="game5/index.html" target="canvas">Game 5</a>
-                </li>
-                
-                <li>
-                    <a href="game4/index.html" target="canvas">Game 4</a>
-                </li>
-
-                <li id="progress">
-                    PROGRESS IN ORDER
-                </li>
-
-                <li>
-                    <a href="number1234/index.html" target="canvas">Number 1234</a>
-                </li>
-                
-                <li>
-                    <a href="shape_1/index.html" target="canvas">Shape 1</a>
-                </li>
-                
-                <li>
-                    <a href="shape_2/index.html" target="canvas">Shape 2</a>
-                </li>
-                
-                <li>
-                    <a href="car/car.html" target="canvas">Moving Car</a>
-                </li>
-                
-                <li>
-                    <a href="draw/draw.html" target="canvas">Free Draw</a>
-                </li>
-
-                <li>
-                    <a href="draw_mousePressed/draw_Press.html" target="canvas">Click Draw</a>
-                </li>
-
-                <li>
-                    <a href="draw_mouseDragged/draw_Drag.html" target="canvas">Lagging Circles</a>
-                </li>
-
-                <li>
-                    <a href="draw_Alpha/draw_Alpha.html" target="canvas">Ghost Drawing</a>
-                </li>
-
-                <li>
-                    <a href="ColorChange/ColorChange.html" target="canvas">Color Dancing Car</a>
-                </li>
-                
-                <li>
-                    <a href="Random_1/random_1.html" target="canvas">Random Colors</a>
-                </li>
-
-                <li>
-                    <a href="Random_2/random_2.html" target="canvas">Random Fireworks</a>
-                </li>
-
-                <li>
-                    <a href="Position and Input/PandI.html" target="canvas">Position&Input</a>
-                </li>
-
-                <li>
-                    <a href="Bounce/Bounce.html" target="canvas">Bouncy Ball</a>
-                </li>
-                
-                <li>
-                    <a href="Bounce+Random/Bounce+Random.html" target="canvas">Party Bouncy Ball</a>
-                </li>
-
-                <li>
-                    <a href="for_1/for_1.html" target="canvas">For_1</a>
-                </li>
-                
-                <li>
-                    <a href="for_2/for_2.html" target="canvas">For_2</a>
-                </li>
-
-                <li>
-                    <a href="Ball_element/Ball_element.html" target="canvas">Bouncy Ball Element</a>
-                </li>
-                
-                <li>
-                    <a href="Ball_element_function/Ball_element_function.html" target="canvas">Ball Element Function</a>
-                </li>
-
-                <li>
-                    <a href="Jeffrey/Jeffrey.html" target="canvas">Jeffrey</a>
-                </li>
-
-                <li>
-                    <a href="PushPop_1/PushPop_1.html" target="canvas">PushPop 1</a>
-                </li>
-
-                <li>
-                    <a href="PushPop_2/PushPop_2.html" target="canvas">PushPop 2</a>
-                </li>
-                
-                <li>
-                    <a href="JitterBug/JitterBug.html" target="canvas">JitterBug</a>
-                </li>
-
-                <li>
-                    <a href="Array/Array.html" target="canvas">Array</a>
-                </li>
-
-                <li>
-                    <a href="Array_function/Array_function.html" target="canvas">JitterArray</a>
-                </li>
-                
-                <li>
-                    <a href="Class_1/Class_1.html" target="canvas">Class</a>
-                </li>
-                
-                <li>
-                    <a href="Class_2/Class_2.html" target="canvas">Class: ClickJitter</a>
-                </li>
-                
-                <li>
-                    <a href="Class_mouseInput_1/Class_mouseInput_1.html" target="canvas">Class: Mouse click</a>
-                </li>
-
-                <li>
-                    <a href="Class_mouseInput_2/Class_mouseInput_2.html" target="canvas">Class: Mouse click 2</a>
-                </li>
-
-                <li>
-                    <a href="Class_mouseInput_Array/Class_mouseInput_Array.html" target="canvas">Class: Jitter Erase</a>
-                </li>
-
-                <li>
-                    <a href="bumping/bumping.html" target="canvas">Black & White Bumping Circles</a>
-                </li>
-                
-                <li>
-                    <a href="explode/explode.html" target="canvas">Explode</a>
-                </li>
-                
-                <li>
-                    <a href="ball drop/ball drop.html" target="canvas">Ball Drop</a>
-                </li>
-
-                <li>
-                    <a href="Ball_Canvases/Ball_Canvases.html" target="canvas">Canvases Practice 1</a>
-                </li>
-
-                <li>
-                    <a href="Canvases/Canvases.html" target="canvas">Canvases Practice 2</a>
-                </li>
-                
-                <li>
-                    <a href="game1/index.html" target="canvas">Game 1</a>
-                </li>
-                
-                <li>
-                    <a href="game2/index.html" target="canvas">Game 2</a>
-                </li>
-                
-                <li>
-                    <a href="game3/index.html" target="canvas">Game 3</a>
-                </li>
-                
-                <li>
-                    <a href="p5jseditor/p5jseditor.html" target="canvas">p5js.editor</a>
-                </li>
-        
-             
-                <!--
-                <li>kjjj
-                    <a href="address" target="canvas">title</a>
-                </li>
-             -->
-                
-            </ul>
-
-            <iframe name="canvas" id="canvas" src="home.html" frameborder="0"></iframe>
+    <main class="main-about">
+        <div class="about-container">
+            <div class="about-left">
+                <img src="sketch.jpg" alt="profile">
+            </div>
             
+            <div class="about-right">
+                <div class="text-content">
+                    <h2 class="about-title">Ian's World</h2>
+                    <div id="lined-text"></div>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
+
+    <script src="index.js"></script>
 </body>
 </html>
-
-
-<!-- 
-
-    git add .
-    git commit -am "from p5js editor"
-    git push
-
- -->
